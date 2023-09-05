@@ -22,7 +22,7 @@ body {
 h1 {
   color: White;
   text-align: center;
-  font-size: 3.0rem;
+  font-size: 3rem;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
@@ -72,57 +72,52 @@ h1 {
   list-style: none;
 }
 
-
-@media screen and (min-width:426px) and (max-width:769px){
-  h1{
+@media screen and (min-width: 426px) and (max-width: 769px) {
+  h1 {
     font-size: 38px;
   }
-  .subheading{
+  .subheading {
     font-size: 30px;
   }
-  .digit{
+  .digit {
     font-size: 32px;
   }
-  
 }
 
-@media screen and (min-width:376px) and (max-width:426px){
-  h1{
+@media screen and (min-width: 376px) and (max-width: 426px) {
+  h1 {
     font-size: 33px;
   }
-  .subheading{
+  .subheading {
     font-size: 20px;
   }
-  .digit{
+  .digit {
     font-size: 29px;
   }
-  .btn{
+  .btn {
     width: 80px;
     font-size: 15px;
   }
-  #lapList{
+  #lapList {
     font-size: 18px;
   }
-  
 }
 
-
-@media screen and (min-width:120px) and (max-width:376px){
-  h1{
+@media screen and (min-width: 120px) and (max-width: 376px) {
+  h1 {
     font-size: 30px;
   }
-  .subheading{
+  .subheading {
     font-size: 18px;
   }
-  .digit{
+  .digit {
     font-size: 25px;
   }
-  .btn{
+  .btn {
     width: 70px;
     font-size: 15px;
   }
-  #lapList{
+  #lapList {
     font-size: 16px;
   }
-  
 }

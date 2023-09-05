@@ -5,7 +5,7 @@ let currentTime, hours, seconds, mili, minutes;
 let arr = [];
 let lapcurrentTime, lapstartTime;
 const startStopButton = document.getElementById("startButton");
-let count =0;
+let count = 0;
 function start() {
   if (startTime == 0) {
     startTime = Date.now();
@@ -89,24 +89,24 @@ function reset() {
 function lap() {
   lapstartTime = Date.now();
   let lapvalue = h1 + ":" + m1 + ":" + s1 + ":" + mili1;
- 
+
   arr.push(lapvalue);
   arr.reverse();
   console.log(arr);
   let lapsHTML = "";
-  
+
   for (let i = 0; i < arr.length; i++) {
     lapsHTML += arr[i] + "<br>";
     count++;
   }
 
- arr.reverse();
+  arr.reverse();
   h1 = 0;
   m1 = 0;
   s1 = 0;
   mili1 = 0;
-  lapsHTML.style="coloumn-reverse";
-//   lapsHTML = document.getElementById("lapList").reverse();
+  lapsHTML.style = "coloumn-reverse";
+  //   lapsHTML = document.getElementById("lapList").reverse();
 
   document.getElementById("lapList").innerHTML = lapsHTML;
 }
