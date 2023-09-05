@@ -1,7 +1,7 @@
 let interval;
 let startTime = 0;
 let beforeStop;
-let currentTime, hours, seconds, mili, minutes;
+let currentTime, hours, seconds, mili, minutes=0;
 let arr = [];
 let lapcurrentTime, lapstartTime;
 const startStopButton = document.getElementById("startButton");
@@ -31,34 +31,34 @@ function updateDisplay() {
   seconds = Math.floor((currentTime % 60000) / 1000);
   mili = Math.floor((currentTime % 1000) / 10);
 
-  h1 = Math.floor(lapcurrentTime / 3600000);
-  m1 = Math.floor((lapcurrentTime % 3600000) / 60000);
-  s1 = Math.floor((lapcurrentTime % 60000) / 1000);
-  mili1 = Math.floor((lapcurrentTime % 1000) / 10);
+  LapHours = Math.floor(lapcurrentTime / 3600000);
+  LapMinute = Math.floor((lapcurrentTime % 3600000) / 60000);
+  LapSecond = Math.floor((lapcurrentTime % 60000) / 1000);
+  Lapmilisecond = Math.floor((lapcurrentTime % 1000) / 10);
 
   if (hours < 10) {
     hours = "0" + hours;
   }
-  if (h1 < 10) {
-    h1 = "0" + h1;
+  if (LapHours < 10) {
+    LapHours = "0" + LapHours;
   }
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  if (m1 < 10) {
-    m1 = "0" + m1;
+  if (LapMinute < 10) {
+    LapMinute = "0" + LapMinute;
   }
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  if (s1 < 10) {
-    s1 = "0" + s1;
+  if (LapSecond < 10) {
+    LapSecond = "0" + LapSecond;
   }
   if (mili < 10) {
     mili = "0" + mili;
   }
-  if (mili1 < 10) {
-    mili1 = "0" + mili1;
+  if (Lapmilisecond < 10) {
+    Lapmilisecond = "0" + Lapmilisecond;
   }
   document.getElementById("display").innerHTML =
     hours + ":" + minutes + ":" + seconds + ":" + mili;
@@ -75,10 +75,10 @@ function stop() {
 
 function reset() {
   clearInterval(interval);
-  (h = 0), (m = 0), (s = 0), (mili = 0);
+  hours = 0, minutes = 0, seconds = 0, mili = 0;
   startTime = 0;
   document.getElementById("display").innerHTML =
-    "0" + h + ":" + "0" + m + ":" + "0" + s + ":" + "0" + mili;
+    "0" + hours + ":" + "0" + minutes + ":" + "0" + seconds + ":" + "0" + mili;
   document.getElementById("startbutton").style.display = "inline-block";
   document.getElementById("Stopbutton").style.display = "none";
   document.getElementById("lapbutton").style.display = "none";
@@ -88,7 +88,8 @@ function reset() {
 
 function lap() {
   lapstartTime = Date.now();
-  let lapvalue = h1 + ":" + m1 + ":" + s1 + ":" + mili1;
+  let lapvalue =
+    LapHours + ":" + LapMinute + ":" + LapSecond + ":" + Lapmilisecond;
 
   arr.push(lapvalue);
   arr.reverse();
@@ -101,10 +102,10 @@ function lap() {
   }
 
   arr.reverse();
-  h1 = 0;
-  m1 = 0;
-  s1 = 0;
-  mili1 = 0;
+  LapHours = 0;
+  LapMinute = 0;
+  LapSecond = 0;
+  Lapmilisecond = 0;
   lapsHTML.style = "coloumn-reverse";
   //   lapsHTML = document.getElementById("lapList").reverse();
 
