@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>STOPWATCH</h1>
+        <h1 class="subheading">VANILLA JAVASCRIPT STOPWATCH</h1>
+        <div id="time">
+            <span class="digit" id="display">
+                00:00:00:00
+            </span>
+        </div>
+        <div id="buttons">
+            <button class="btn" id="startbutton" onclick="start()">
+                Start</button>
+                <button class="btn" id="Stopbutton" onclick="stop()">
+                    Stop</button>
+            <button class="btn" id="resetbutton" onclick="reset()">
+                Reset</button>
+            <button class="btn" id="lapbutton" onclick="lap()">
+                Lap</button>
+            <div id="laps">
+                <div id="lapList"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
