@@ -1,7 +1,7 @@
 let interval;
 let startTime = 0;
 let beforeStop;
-let currentTime, hours, seconds, mili, minutes=0;
+let currentTime, hours, seconds, mili, minutes=0 , LapMinute , LapHours , Lapmilisecond , LapSecond;
 let arr = [];
 let lapcurrentTime, lapstartTime;
 const startStopButton = document.getElementById("startButton");
