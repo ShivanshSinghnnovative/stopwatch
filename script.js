@@ -39,8 +39,8 @@ function updateDisplay() {
   if (hours < 10) {
     hours = "0" + hours;
   }
-  if (LapHours < 10) {
-    LapHours = "0" + lapHours;
+  if (lapHours < 10) {
+    lapHours = "0" + lapHours;
   }
   if (minutes < 10) {
     minutes = "0" + minutes;
@@ -89,7 +89,7 @@ function reset() {
 function lap() {
   lapstartTime = Date.now();
   let lapvalue =
-    LapHours + ":" + LapMinute + ":" + LapSecond + ":" + Lapmilisecond;
+    lapHours + ":" + lapMinute + ":" + lapSecond + ":" + lapmilisecond;
 
   arr.push(lapvalue);
   arr.reverse();
