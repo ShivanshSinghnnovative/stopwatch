@@ -1,7 +1,7 @@
 let interval;
 let startTime = 0;
 let beforeStop;
-let currentTime, hours, seconds, mili, minutes=0 , LapMinute , LapHours , Lapmilisecond , LapSecond;
+let currentTime, hours, seconds, mili, minutes=0 , lapMinute , lapHours , lapmilisecond , lapSecond;
 let arr = [];
 let lapcurrentTime, lapstartTime;
 const startStopButton = document.getElementById("startButton");
@@ -31,34 +31,34 @@ function updateDisplay() {
   seconds = Math.floor((currentTime % 60000) / 1000);
   mili = Math.floor((currentTime % 1000) / 10);
 
-  LapHours = Math.floor(lapcurrentTime / 3600000);
-  LapMinute = Math.floor((lapcurrentTime % 3600000) / 60000);
-  LapSecond = Math.floor((lapcurrentTime % 60000) / 1000);
-  Lapmilisecond = Math.floor((lapcurrentTime % 1000) / 10);
+  lapHours = Math.floor(lapcurrentTime / 3600000);
+  lapMinute = Math.floor((lapcurrentTime % 3600000) / 60000);
+  lapSecond = Math.floor((lapcurrentTime % 60000) / 1000);
+  lapmilisecond = Math.floor((lapcurrentTime % 1000) / 10);
 
   if (hours < 10) {
     hours = "0" + hours;
   }
   if (LapHours < 10) {
-    LapHours = "0" + LapHours;
+    LapHours = "0" + lapHours;
   }
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  if (LapMinute < 10) {
-    LapMinute = "0" + LapMinute;
+  if (lapMinute < 10) {
+    lapMinute = "0" + lapMinute;
   }
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  if (LapSecond < 10) {
-    LapSecond = "0" + LapSecond;
+  if (lapSecond < 10) {
+    lapSecond = "0" + lapSecond;
   }
   if (mili < 10) {
     mili = "0" + mili;
   }
-  if (Lapmilisecond < 10) {
-    Lapmilisecond = "0" + Lapmilisecond;
+  if (lapmilisecond < 10) {
+    lapmilisecond = "0" + lapmilisecond;
   }
   document.getElementById("display").innerHTML =
     hours + ":" + minutes + ":" + seconds + ":" + mili;
@@ -102,10 +102,10 @@ function lap() {
   }
 
   arr.reverse();
-  LapHours = 0;
-  LapMinute = 0;
-  LapSecond = 0;
-  Lapmilisecond = 0;
+  lapHours = 0;
+  lapMinute = 0;
+  lapSecond = 0;
+  lapmilisecond = 0;
   lapsHTML.style = "coloumn-reverse";
   //   lapsHTML = document.getElementById("lapList").reverse();
 
